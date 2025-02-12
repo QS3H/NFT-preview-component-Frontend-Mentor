@@ -97,6 +97,7 @@ body {
   font-size: 1.375rem;
   margin: 1.5rem 0;
   cursor: pointer;
+  font-weight: var(--font-weight-bold);
 }
 
 .card h1 a {
