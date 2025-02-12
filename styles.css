@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --soft-purple: hsl(265, 51%, 70%);
+  --purple: hsl(278, 100%, 50%);
+  --very-dark-purple-main-bg: hsl(267, 54%, 11%);
+  --very-dark-purple-card-bg: hsl(266, 50%, 16%);
+  --very-dark-purple-line: hsl(265, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --font-family: "Outfit", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --font-size-paragraph: 18px;
+}
+
+/* Main Styles */
+
+body {
+  background-color: var(--very-dark-purple-main-bg);
+  color: var(--white);
+  font-family: var(--font-family);
+  font-size: var(--font-size-paragraph);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 1.5rem;
+  background-color: var(--very-dark-purple-card-bg);
+  border-radius: 15px;
+  margin: 2rem;
+}
+
+.image-container {
+  position: relative;
+  width: 18.875rem;
+  height: 18.875rem;
+  border-radius: 8px;
+}
+
+.image-container div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: hsl(278, 100%, 50%, 50%);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image-container div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card h1 {
+  font-size: 1.375rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.card h1 a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.card h1 a:hover {
+  color: var(--purple);
+}
+
+.text {
+  color: var(--soft-purple);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-light);
+  line-height: 26px;
+}
+
+.card ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  font-size: 16px;
+  border-bottom: 1px solid var(--very-dark-purple-line);
+}
+
+.card ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--soft-purple);
+  font-weight: var(--font-weight-regular);
+}
+
+.card ul li:first-child {
+  color: var(--purple);
+  font-weight: var(--font-weight-bold);
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.avatar-container p {
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: var(--soft-purple);
+}
+
+.avatar-container p span {
+  color: var(--white);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.avatar-container p span:hover {
+  color: var(--purple);
+}
+
+.avatar {
+  width: 2.063rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
